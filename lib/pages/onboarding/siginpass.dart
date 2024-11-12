@@ -1,15 +1,23 @@
 import 'package:benstore/components/my_buttton.dart';
-import 'package:benstore/pages/onboarding/siginpass.dart';
+import 'package:benstore/pages/onboarding/forgot_password.dart';
+import 'package:benstore/pages/onboarding/login.dart';
 import 'package:flutter/material.dart';
 
-class Login extends StatelessWidget {
-  const Login({super.key});
+class Siginpass extends StatelessWidget {
+  const Siginpass({super.key});
 
   // Function to navigate to the Siginpass page
   void signInPassword(BuildContext context) {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => const Siginpass()),
+      MaterialPageRoute(builder: (context) => const Login()),
+    );
+  }
+
+  void forgotPass(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => const ForgotPassword()),
     );
   }
 
@@ -29,7 +37,7 @@ class Login extends StatelessWidget {
             const SizedBox(height: 30),
             const TextField(
               decoration: InputDecoration(
-                labelText: 'Email address',
+                labelText: 'Password',
                 labelStyle: TextStyle(
                     color: Color(0x87272727),
                     fontFamily: 'CircularStd',
@@ -59,7 +67,7 @@ class Login extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text(
-                  'Do not have an Account?',
+                  'Forgot Password?',
                   style: TextStyle(
                     fontSize: 12,
                     color: Color(0xCE000000),
@@ -67,9 +75,9 @@ class Login extends StatelessWidget {
                 ),
                 const SizedBox(width: 5),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () => forgotPass(context),
                   child: const Text(
-                    'Create one',
+                    'Reset',
                     style: TextStyle(
                       fontSize: 13,
                       color: Color(0xCE000000),
@@ -78,45 +86,6 @@ class Login extends StatelessWidget {
                   ),
                 ),
               ],
-            ),
-            const SizedBox(
-              height: 100,
-            ),
-            MyButton(
-              onTap: () => signInPassword(context),
-              buttonText: 'Continue with Apple',
-              buttonColor: const Color(0x39B3B3B3),
-              buttonTextColor: const Color(0xCE000000),
-              fontSize: 16,
-              fontFamily: 'CircularStd',
-              buttonImage: Image.asset('assets/Apple.png'),
-              fontWeight: FontWeight.normal,
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            MyButton(
-              onTap: () => signInPassword(context),
-              buttonText: 'Continue with Google',
-              buttonColor: const Color(0x39B3B3B3),
-              buttonTextColor: const Color(0xCE000000),
-              fontSize: 16,
-              fontFamily: 'CircularStd',
-              buttonImage: Image.asset('assets/Google.png'),
-              fontWeight: FontWeight.normal,
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            MyButton(
-              onTap: () => signInPassword(context),
-              buttonText: 'Continue with Facebook',
-              buttonColor: const Color(0x39B3B3B3),
-              buttonTextColor: const Color(0xCE000000),
-              fontSize: 16,
-              fontFamily: 'CircularStd',
-              buttonImage: Image.asset('assets/Facebook.png'),
-              fontWeight: FontWeight.normal,
             ),
           ],
         ),
