@@ -1,4 +1,4 @@
-import 'package:benstore/pages/dashboard.dart';
+import 'package:benstore/pages/onboarding/login.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -9,7 +9,7 @@ class SplashScreen extends StatelessWidget {
     Future.delayed(const Duration(milliseconds: 3000), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => const Dashboard()),
+        MaterialPageRoute(builder: (context) => const Login()),
       );
     });
     return Scaffold(
