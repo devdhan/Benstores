@@ -1,14 +1,14 @@
 import 'package:benstore/components/my_buttton.dart';
-import 'package:benstore/pages/onboarding/login.dart';
+import 'package:benstore/pages/onboarding/password_reset.dart';
 import 'package:flutter/material.dart';
 
 class ForgotPassword extends StatelessWidget {
   const ForgotPassword({super.key});
 
-  void signInPassword(BuildContext context) {
-    Navigator.push(
+  void passwordReset(BuildContext context) {
+    Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (context) => const Login()),
+      MaterialPageRoute(builder: (context) => const PasswordReset()),
     );
   }
 
@@ -21,9 +21,19 @@ class ForgotPassword extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Image.asset(
-            //   'assets/backarrow.png',
-            // ),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 10.0),
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: Image.asset(
+                  'assets/left.png',
+                  height: 24,
+                  width: 24,
+                ),
+              ),
+            ),
             const Text(
               'Forgot Password',
               style: TextStyle(fontFamily: 'CircularStd', fontSize: 35),
@@ -48,7 +58,7 @@ class ForgotPassword extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             MyButton(
-              onTap: () => signInPassword(context),
+              onTap: () => passwordReset(context),
               buttonText: 'Continue',
               buttonColor: const Color(0xFFE75336),
               buttonTextColor: const Color(0xFFFFFFFF),

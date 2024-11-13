@@ -1,4 +1,5 @@
 import 'package:benstore/components/my_buttton.dart';
+import 'package:benstore/pages/onboarding/create_account.dart';
 import 'package:benstore/pages/onboarding/siginpass.dart';
 import 'package:flutter/material.dart';
 
@@ -10,6 +11,13 @@ class Login extends StatelessWidget {
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => const Siginpass()),
+    );
+  }
+
+  void createAccount(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => CreateAccount()),
     );
   }
 
@@ -67,7 +75,7 @@ class Login extends StatelessWidget {
                 ),
                 const SizedBox(width: 5),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () => createAccount(context),
                   child: const Text(
                     'Create one',
                     style: TextStyle(
