@@ -26,13 +26,16 @@ class PasswordReset extends StatelessWidget {
               width: 150,
             ),
             const SizedBox(height: 5),
-            const Text(
-              'We Sent you an Email to reset your password.',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontFamily: 'CircularStd',
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 10.0),
+              child: Text(
+                'We Sent you an Email to reset your password.',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontFamily: 'CircularStd',
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
             const SizedBox(height: 15),

@@ -17,7 +17,7 @@ class Login extends StatelessWidget {
   void createAccount(BuildContext context) {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => CreateAccount()),
+      MaterialPageRoute(builder: (context) => const CreateAccount()),
     );
   }
 
