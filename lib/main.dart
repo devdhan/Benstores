@@ -1,4 +1,4 @@
-import 'package:benstore/pages/setting/profile.dart';
+import 'package:benstore/pages/order/noorder.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Profile(),
+      home: Noorder(),
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:benstore/pages/onboarding/login.dart';
+import 'package:benstore/pages/setting/add_address.dart';
 import 'package:flutter/material.dart';
 
 class Profile extends StatelessWidget {
@@ -8,6 +9,13 @@ class Profile extends StatelessWidget {
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => const Login()),
+    );
+  }
+
+  void addaddress(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => const AddAddress()),
     );
   }
 
@@ -21,7 +29,7 @@ class Profile extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               const SizedBox(
-                height: 100,
+                height: 90,
               ),
               Center(child: Image.asset('assets/profilepic.png')),
               const SizedBox(
@@ -62,6 +70,9 @@ class Profile extends StatelessWidget {
                                 color: Colors.black54,
                               ),
                             ),
+                            const SizedBox(
+                              width: 20.0,
+                            ),
                             GestureDetector(
                               onTap: () {
                                 print("Edit clicked");
@@ -70,7 +81,8 @@ class Profile extends StatelessWidget {
                                 'Edit',
                                 style: TextStyle(
                                   fontFamily: 'CircularStd',
-                                  fontSize: 16,
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w700,
                                   color: Color(0xFFE75336),
                                 ),
                               ),
@@ -119,10 +131,11 @@ class Profile extends StatelessWidget {
                                 fontWeight: FontWeight.normal,
                               ),
                             ),
+                            const SizedBox(
+                              width: 20.0,
+                            ),
                             GestureDetector(
-                              onTap: () {
-                                print('address pressed');
-                              },
+                              onTap: () => addaddress(context),
                               child: Image.asset(
                                 'assets/arrowright.png',
                               ),
@@ -162,6 +175,9 @@ class Profile extends StatelessWidget {
                                 fontSize: 16,
                                 fontWeight: FontWeight.normal,
                               ),
+                            ),
+                            const SizedBox(
+                              width: 20.0,
                             ),
                             GestureDetector(
                               onTap: () {
@@ -207,6 +223,9 @@ class Profile extends StatelessWidget {
                                 fontWeight: FontWeight.normal,
                               ),
                             ),
+                            const SizedBox(
+                              width: 20.0,
+                            ),
                             GestureDetector(
                               onTap: () {
                                 print('payment pressed');
@@ -251,6 +270,9 @@ class Profile extends StatelessWidget {
                                 fontWeight: FontWeight.normal,
                               ),
                             ),
+                            const SizedBox(
+                              width: 20.0,
+                            ),
                             GestureDetector(
                               onTap: () {
                                 print('help pressed');
@@ -294,6 +316,9 @@ class Profile extends StatelessWidget {
                                 fontSize: 16,
                                 fontWeight: FontWeight.normal,
                               ),
+                            ),
+                            const SizedBox(
+                              width: 20.0,
                             ),
                             GestureDetector(
                               onTap: () {
