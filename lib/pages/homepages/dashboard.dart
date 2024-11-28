@@ -74,6 +74,37 @@ class Dashboard extends StatelessWidget {
                   ],
                 ),
               ),
+            ),
+            const SizedBox(
+              height: 20.0,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text(
+                    'Categories',
+                    style: TextStyle(
+                      fontFamily: 'CircularStd',
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      print('sell all tapped');
+                    },
+                    child: const Text(
+                      'See All',
+                      style: TextStyle(
+                        fontFamily: 'CircularStd',
+                        fontSize: 16,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             )
           ],
         ),
