@@ -29,40 +29,39 @@ class _DashboardState extends State<Dashboard> {
     });
   }
 
-  void shopcategory(BuildContext context) {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => const Category()),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFFFFFFFF),
       body: _screens[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.red,
+        backgroundColor: Color(0xFFFFFFFF),
         elevation: 0,
-        selectedItemColor: Color(0xFFE75336),
-        unselectedItemColor: Color.fromRGBO(39, 39, 39, 50),
+        type: BottomNavigationBarType.shifting,
+        selectedItemColor: const Color(0xFFE75336),
+        unselectedItemColor: const Color(0xCE272727),
+        iconSize: 30,
+        selectedLabelStyle: const TextStyle(
+            fontFamily: 'CircularStd',
+            fontSize: 16,
+            fontWeight: FontWeight.bold),
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(Icons.home_outlined),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.notifications),
+            icon: Icon(Icons.notifications_none_rounded),
             label: 'Notifications',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_cart),
+            icon: Icon(Icons.receipt_outlined),
             label: 'Orders',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.account_circle),
+            icon: Icon(Icons.person_3_outlined),
             label: 'Profile',
           ),
         ],
@@ -73,6 +72,20 @@ class _DashboardState extends State<Dashboard> {
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
+
+  void profile(BuildContext context) {
+    final dashboardState = context.findAncestorStateOfType<_DashboardState>();
+    if (dashboardState != null) {
+      dashboardState._onItemTapped(3);
+    }
+  }
+
+  void shopcategory(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => const Category()),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -88,7 +101,7 @@ class HomeScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () => profile(context),
                     child: Image.asset(
                       'assets/profilepic.png',
                       width: 40,
@@ -158,7 +171,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () => shopcategory(context),
                     child: const Text(
                       'See All',
                       style: TextStyle(

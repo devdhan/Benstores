@@ -348,7 +348,10 @@ class Profile extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                       color: Color(0xFFE75336)),
                 ),
-              )
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
             ],
           ),
         ),

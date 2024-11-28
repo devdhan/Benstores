@@ -1,8 +1,14 @@
 import 'package:benstore/components/my_buttton.dart';
+import 'package:benstore/pages/homepages/category.dart';
 import 'package:flutter/material.dart';
 
 class Notifaction extends StatelessWidget {
   const Notifaction({super.key});
+
+  void shopcategory(BuildContext context) {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => Category()));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +58,7 @@ class Notifaction extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 50.0),
               child: MyButton(
-                  onTap: () {},
+                  onTap: () => shopcategory(context),
                   buttonText: 'Explore Categories',
                   buttonColor: const Color(0xFFE75336),
                   buttonTextColor: const Color(0xFFFFFFFF),

@@ -7,10 +7,8 @@ class Siginpass extends StatelessWidget {
   const Siginpass({super.key});
 
   void dashboard(BuildContext context) {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => const Dashboard()),
-    );
+    Navigator.pushAndRemoveUntil(context,
+        MaterialPageRoute(builder: (context) => Dashboard()), (route) => false);
   }
 
   void forgotPass(BuildContext context) {
