@@ -1,16 +1,15 @@
 import 'package:benstore/components/my_buttton.dart';
+import 'package:benstore/pages/homepages/dashboard.dart';
 import 'package:benstore/pages/onboarding/forgot_password.dart';
-import 'package:benstore/pages/onboarding/login.dart';
 import 'package:flutter/material.dart';
 
 class Siginpass extends StatelessWidget {
   const Siginpass({super.key});
 
-  // Function to navigate to the Siginpass page
-  void signInPassword(BuildContext context) {
+  void dashboard(BuildContext context) {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => const Login()),
+      MaterialPageRoute(builder: (context) => const Dashboard()),
     );
   }
 
@@ -56,7 +55,7 @@ class Siginpass extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               MyButton(
-                onTap: () => signInPassword(context),
+                onTap: () => dashboard(context),
                 buttonText: 'Continue',
                 buttonColor: const Color(0xFFE75336),
                 buttonTextColor: const Color(0xFFFFFFFF),

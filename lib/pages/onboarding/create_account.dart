@@ -1,9 +1,17 @@
 import 'package:benstore/components/my_buttton.dart';
+import 'package:benstore/pages/homepages/dashboard.dart';
 import 'package:benstore/pages/onboarding/login.dart';
 import 'package:flutter/material.dart';
 
 class CreateAccount extends StatelessWidget {
   const CreateAccount({super.key});
+
+  void dashboard(BuildContext context) {
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => const Dashboard()),
+    );
+  }
 
   void signIn(BuildContext context) {
     Navigator.pushReplacement(
@@ -132,7 +140,7 @@ class CreateAccount extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               MyButton(
-                onTap: () => signIn(context),
+                onTap: () => dashboard(context),
                 buttonText: 'Continue',
                 buttonColor: const Color(0xFFE75336),
                 buttonTextColor: const Color(0xFFFFFFFF),
