@@ -1,8 +1,8 @@
 import 'package:benstore/components/my_buttton.dart';
 import 'package:flutter/material.dart';
 
-class Noorder extends StatelessWidget {
-  const Noorder({super.key});
+class Notifaction extends StatelessWidget {
+  const Notifaction({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class Noorder extends StatelessWidget {
             const SizedBox(height: 30),
             const Center(
               child: Text(
-                'Orders',
+                'Notifactions',
                 style: TextStyle(
                   fontFamily: 'CircularStd',
                   fontSize: 18,
@@ -24,13 +24,13 @@ class Noorder extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 220.0,
+              height: 210.0,
             ),
             Center(
               child: Image.asset(
-                'assets/shopping-cart.png',
-                width: 80,
-                height: 80,
+                'assets/bell.png',
+                width: 85,
+                height: 85,
               ),
             ),
             const SizedBox(
@@ -38,7 +38,7 @@ class Noorder extends StatelessWidget {
             ),
             const Center(
               child: Text(
-                'No Orders Yet',
+                'No Notifications Yet',
                 style: TextStyle(
                   fontFamily: 'CircularStd',
                   fontSize: 24,
