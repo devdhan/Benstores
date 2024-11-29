@@ -1,3 +1,4 @@
+import 'package:benstore/components/product_card.dart';
 import 'package:benstore/pages/cart/cart_homepage.dart';
 import 'package:benstore/pages/order/noorder.dart';
 import 'package:benstore/pages/order/notifaction.dart';
@@ -36,7 +37,7 @@ class _DashboardState extends State<Dashboard> {
       backgroundColor: const Color(0xFFFFFFFF),
       body: _screens[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Color(0xFFFFFFFF),
+        backgroundColor: const Color(0xFFFFFFFF),
         elevation: 0,
         type: BottomNavigationBarType.shifting,
         selectedItemColor: const Color(0xFFE75336),
@@ -91,6 +92,14 @@ class HomeScreen extends StatelessWidget {
 
   //Navigate to Cart
   void cart(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => const CartHomepage()),
+    );
+  }
+
+  //Navigate to Cart
+  void productinfo(BuildContext context) {
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => const CartHomepage()),
@@ -284,7 +293,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 5.0,
+              height: 10.0,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -292,8 +301,9 @@ class HomeScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const Text(
-                    'Top Selling',
+                    'New In',
                     style: TextStyle(
+                      color: Color(0xFFE75336),
                       fontFamily: 'CircularStd',
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
@@ -312,6 +322,67 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
+            const SizedBox(
+              height: 10.0,
+            ),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20.0),
+                    child: ProductCard(
+                      imagePath: 'assets/jambox.jpg',
+                      title: 'Zealot S53 Mini',
+                      price: '₦ 28,790',
+                      onTap: () => productinfo(context),
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 15.0,
+                  ),
+                  ProductCard(
+                    imagePath: 'assets/power.jpg',
+                    title: 'itel 20000mAh',
+                    price: '₦ 15,950',
+                    onTap: () => productinfo(context),
+                  ),
+                  const SizedBox(
+                    width: 15.0,
+                  ),
+                  ProductCard(
+                    imagePath: 'assets/pouch.jpg',
+                    title: 'Transparent Back Clear Case For IPhone',
+                    price: '₦ 3,040',
+                    onTap: () => productinfo(context),
+                  ),
+                  const SizedBox(
+                    width: 15.0,
+                  ),
+                  ProductCard(
+                    imagePath: 'assets/fridge.jpg',
+                    title: 'Haier Thermocool Refrigerator',
+                    price: '₦ 203,155',
+                    onTap: () => productinfo(context),
+                  ),
+                  const SizedBox(
+                    width: 15.0,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 20.0),
+                    child: ProductCard(
+                      imagePath: 'assets/mouse.jpg',
+                      title: 'Zealot S53 Mini',
+                      price: '₦ 28,790',
+                      onTap: () => productinfo(context),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 20.0,
+            )
           ],
         ),
       ),

@@ -20,7 +20,7 @@ class CartHomepage extends StatelessWidget {
           children: [
             const SizedBox(height: 30),
             Padding(
-              padding: const EdgeInsets.only(left: 25.0),
+              padding: const EdgeInsets.only(left: 20.0),
               child: GestureDetector(
                 onTap: () {
                   Navigator.pop(context);
