@@ -229,7 +229,7 @@ class HomeScreen extends StatelessWidget {
                     onTap: () {
                       print('Content Creation Kit pressed');
                     },
-                    imagePath: 'assets/bag.png',
+                    imagePath: 'assets/creation.png',
                     label: 'Content Creation Kit',
                   ),
                   const SizedBox(
@@ -239,8 +239,8 @@ class HomeScreen extends StatelessWidget {
                       onTap: () {
                         print('Electronics & Accessories pressed');
                       },
-                      imagePath: 'assets/accessories.png',
-                      label: 'Electronics, Accessories'),
+                      imagePath: 'assets/electronic.jpg',
+                      label: 'Electronics Accessories'),
                   const SizedBox(
                     width: 20.0,
                   ),
@@ -248,7 +248,7 @@ class HomeScreen extends StatelessWidget {
                       onTap: () {
                         print('Networking Devices pressed');
                       },
-                      imagePath: 'assets/accessories.png',
+                      imagePath: 'assets/network.jpg',
                       label: 'Networking Devices'),
                   const SizedBox(
                     width: 20.0,
@@ -257,7 +257,7 @@ class HomeScreen extends StatelessWidget {
                       onTap: () {
                         print('Phone Accessories pressed');
                       },
-                      imagePath: 'assets/accessories.png',
+                      imagePath: 'assets/phoneacc.jpg',
                       label: 'Phone Accessories'),
                   const SizedBox(
                     width: 20.0,
@@ -268,7 +268,7 @@ class HomeScreen extends StatelessWidget {
                         onTap: () {
                           print('Storage Devices pressed');
                         },
-                        imagePath: 'assets/accessories.png',
+                        imagePath: 'assets/storage.jpeg',
                         label: 'Storage Devices'),
                   ),
                 ],

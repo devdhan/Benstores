@@ -17,7 +17,7 @@ class CategoryItem extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: SizedBox(
-        height: 180,
+        height: 160,
         width: 90,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
