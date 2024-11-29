@@ -1,3 +1,4 @@
+import 'package:benstore/pages/cart/cart_homepage.dart';
 import 'package:benstore/pages/order/noorder.dart';
 import 'package:benstore/pages/order/notifaction.dart';
 import 'package:benstore/pages/setting/profile.dart';
@@ -88,6 +89,14 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
+  //Navigate to Cart
+  void cart(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => const CartHomepage()),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -110,7 +119,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () => cart(context),
                     child: Image.asset(
                       'assets/carticon.png',
                       width: 40,
