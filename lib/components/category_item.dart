@@ -17,24 +17,33 @@ class CategoryItem extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: SizedBox(
-        height: 120,
-        width: 80,
+        height: 180,
+        width: 90,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset(
-              imagePath,
-              width: 80,
-              height: 80,
+            Container(
+              width: 90,
+              height: 90,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                image: DecorationImage(
+                  image: AssetImage(imagePath),
+                  fit: BoxFit.cover,
+                ),
+              ),
             ),
             const SizedBox(
               height: 10,
             ),
-            Text(
-              label,
-              style: const TextStyle(
-                fontFamily: 'CircularStd',
-                fontSize: 14,
+            Center(
+              child: Text(
+                label,
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                  fontFamily: 'CircularStd',
+                  fontSize: 14,
+                ),
               ),
             ),
           ],

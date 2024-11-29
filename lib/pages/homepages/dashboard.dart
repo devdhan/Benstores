@@ -80,6 +80,7 @@ class HomeScreen extends StatelessWidget {
     }
   }
 
+  //Navigate to Category
   void shopcategory(BuildContext context) {
     Navigator.push(
       context,
@@ -119,6 +120,7 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
+            //Search Bar
             const SizedBox(height: 20),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -186,6 +188,7 @@ class HomeScreen extends StatelessWidget {
             const SizedBox(
               height: 20.0,
             ),
+            //Categories List
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
@@ -194,58 +197,85 @@ class HomeScreen extends StatelessWidget {
                       padding: const EdgeInsets.only(left: 20.0),
                       child: CategoryItem(
                         onTap: () {
-                          print('Hoodies pressed');
+                          print('Bluetooth pressed');
                         },
-                        imagePath: 'assets/hoodie.png',
-                        label: 'Hoodies',
+                        imagePath: 'assets/speaker.png',
+                        label: 'Bluetooth Speakers',
                       )),
                   const SizedBox(
-                    width: 10.0,
+                    width: 20.0,
                   ),
                   CategoryItem(
                     onTap: () {
-                      print('Shorts pressed');
+                      print('charger pressed');
                     },
-                    imagePath: 'assets/shorts.png',
-                    label: 'Shorts',
+                    imagePath: 'assets/powerbank.jpeg',
+                    label: 'Charger, Cables & Powerbank',
                   ),
                   const SizedBox(
-                    width: 10.0,
+                    width: 20.0,
                   ),
                   CategoryItem(
                     onTap: () {
-                      print('Shoe pressed');
+                      print('Computer Accessories pressed');
                     },
-                    imagePath: 'assets/shoe.png',
-                    label: 'Shoe',
+                    imagePath: 'assets/accessories.jpg',
+                    label: 'Computer Accessories',
                   ),
                   const SizedBox(
-                    width: 10.0,
+                    width: 20.0,
                   ),
                   CategoryItem(
                     onTap: () {
-                      print('Bag pressed');
+                      print('Content Creation Kit pressed');
                     },
                     imagePath: 'assets/bag.png',
-                    label: 'Bag',
+                    label: 'Content Creation Kit',
                   ),
                   const SizedBox(
-                    width: 10.0,
+                    width: 20.0,
+                  ),
+                  CategoryItem(
+                      onTap: () {
+                        print('Electronics & Accessories pressed');
+                      },
+                      imagePath: 'assets/accessories.png',
+                      label: 'Electronics, Accessories'),
+                  const SizedBox(
+                    width: 20.0,
+                  ),
+                  CategoryItem(
+                      onTap: () {
+                        print('Networking Devices pressed');
+                      },
+                      imagePath: 'assets/accessories.png',
+                      label: 'Networking Devices'),
+                  const SizedBox(
+                    width: 20.0,
+                  ),
+                  CategoryItem(
+                      onTap: () {
+                        print('Phone Accessories pressed');
+                      },
+                      imagePath: 'assets/accessories.png',
+                      label: 'Phone Accessories'),
+                  const SizedBox(
+                    width: 20.0,
                   ),
                   Padding(
                     padding: const EdgeInsets.only(right: 20.0),
                     child: CategoryItem(
                         onTap: () {
-                          print('Accessories pressed');
+                          print('Storage Devices pressed');
                         },
                         imagePath: 'assets/accessories.png',
-                        label: 'Accessories'),
+                        label: 'Storage Devices'),
                   ),
                 ],
               ),
             ),
             const SizedBox(
-              height: 20.0,
+              height: 5.0,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
