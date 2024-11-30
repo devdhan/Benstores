@@ -101,7 +101,7 @@ class ProductDetailsPage extends StatelessWidget {
                 color: Color(0xFFFFFFFF),
               ),
               onTap: () {},
-              buttonText: 'Add to Bags',
+              buttonText: 'Add to Bag',
               buttonColor: const Color(0xFFE75336),
               buttonTextColor: const Color(0xFFFFFFFF),
               fontSize: 16,
