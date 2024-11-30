@@ -6,6 +6,8 @@ class ProductCard extends StatelessWidget {
   final String price;
   final VoidCallback onTap;
 
+  static const String nairaSymbol = '₦';
+
   const ProductCard({
     super.key,
     required this.imagePath,
@@ -51,7 +53,7 @@ class ProductCard extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 10.0),
               child: Text(
-                price,
+                '$nairaSymbol $price',
                 style: const TextStyle(
                   fontFamily: 'CircularStd',
                   fontSize: 15,

@@ -1,5 +1,6 @@
 import 'package:benstore/components/product_card.dart';
 import 'package:benstore/pages/cart/cart_homepage.dart';
+import 'package:benstore/pages/homepages/product_details_page.dart';
 import 'package:benstore/pages/order/noorder.dart';
 import 'package:benstore/pages/order/notifaction.dart';
 import 'package:benstore/pages/setting/profile.dart';
@@ -334,8 +335,21 @@ class HomeScreen extends StatelessWidget {
                     child: ProductCard(
                       imagePath: 'assets/jambox.jpg',
                       title: 'Zealot S53 Mini',
-                      price: '₦ 28,790',
-                      onTap: () => productinfo(context),
+                      price: '28,790',
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const ProductDetailsPage(
+                              title: 'Zealot S53 Mini',
+                              price: '28,790',
+                              imagePath: 'assets/jambox.jpg',
+                              description:
+                                  'A portable, waterproof Bluetooth speaker with HIFI stereo sound and dual RGB lights for an immersive music experience. Features include 10W loud stereo sound with wireless dual pairing, IPX6 waterproof durability, multiple playback modes (Bluetooth, USB, TF card, AUX), and long battery life (up to 30 hours at 50% volume). Compact and lightweight (500g), it’s compatible with most devices and ideal for on-the-go entertainment.',
+                            ),
+                          ),
+                        );
+                      },
                     ),
                   ),
                   const SizedBox(
@@ -344,8 +358,21 @@ class HomeScreen extends StatelessWidget {
                   ProductCard(
                     imagePath: 'assets/power.jpg',
                     title: 'itel 20000mAh',
-                    price: '₦ 15,950',
-                    onTap: () => productinfo(context),
+                    price: '15,950',
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const ProductDetailsPage(
+                            title: 'itel 20000mAh',
+                            price: '15,950',
+                            imagePath: 'assets/power.jpg',
+                            description:
+                                'A high-speed 15W power bank with Type-C (5V/3A) and USB-A (5V/3A) outputs, supporting simultaneous charging. Features universal compatibility, a compact design, high-capacity battery for multiple charges, durable build, and intelligent safety protections (over-current, over-voltage, and short-circuit). Perfect for on-the-go charging.',
+                          ),
+                        ),
+                      );
+                    },
                   ),
                   const SizedBox(
                     width: 15.0,
@@ -353,8 +380,21 @@ class HomeScreen extends StatelessWidget {
                   ProductCard(
                     imagePath: 'assets/pouch.jpg',
                     title: 'Transparent Back Clear Case For IPhone',
-                    price: '₦ 3,040',
-                    onTap: () => productinfo(context),
+                    price: '3,040',
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const ProductDetailsPage(
+                            title: 'Transparent Back Clear Case For IPhone',
+                            price: '3,040',
+                            imagePath: 'assets/pouch.jpg',
+                            description:
+                                'A durable, transparent TPU case for iPhones (models 13, 12, 11 Pro Max, Mini, Xs, X, Xr, Xs Max, 7, 8 Plus, Se 2020) offering high protection against scratches and damage. The case is shockproof, non-corrosive, and designed to preserve the devices appearance while being easy to install and remove. It doesn’t obstruct ports and prevents wear and tear, ensuring a sleek, stylish look without chemical irritation.',
+                          ),
+                        ),
+                      );
+                    },
                   ),
                   const SizedBox(
                     width: 15.0,
@@ -362,8 +402,21 @@ class HomeScreen extends StatelessWidget {
                   ProductCard(
                     imagePath: 'assets/fridge.jpg',
                     title: 'Haier Thermocool Refrigerator',
-                    price: '₦ 203,155',
-                    onTap: () => productinfo(context),
+                    price: '203,155',
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const ProductDetailsPage(
+                            title: 'Haier Thermocool Refrigerator',
+                            price: '203,155',
+                            imagePath: 'assets/fridge.jpg',
+                            description:
+                                'A modern, efficient refrigerator designed to make daily life easier, offering up to 35% energy and cost savings with reduced electricity consumption. It features thicker insulation for longer temperature retention and a reversible door with a magnetic seal, allowing flexibility in placement to suit any space in your home or office.',
+                          ),
+                        ),
+                      );
+                    },
                   ),
                   const SizedBox(
                     width: 15.0,
@@ -372,9 +425,22 @@ class HomeScreen extends StatelessWidget {
                     padding: const EdgeInsets.only(right: 20.0),
                     child: ProductCard(
                       imagePath: 'assets/mouse.jpg',
-                      title: 'Zealot S53 Mini',
-                      price: '₦ 28,790',
-                      onTap: () => productinfo(context),
+                      title: '2.4G Wireless Mouse',
+                      price: '3,804',
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const ProductDetailsPage(
+                              title: '2.4G Wireless Mouse',
+                              price: '3,804',
+                              imagePath: 'assets/mouse.jpg',
+                              description:
+                                  'A lightweight, slim, and portable 2.4G wireless mouse with a 10m range, 1600 DPI optical precision for accurate tracking, and ergonomic design for comfortable long-term use. Features quiet operation, plug-and-play functionality, and 4 keys. Powered by 2 AAA batteries (not included).',
+                            ),
+                          ),
+                        );
+                      },
                     ),
                   ),
                 ],
