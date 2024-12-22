@@ -19,6 +19,28 @@ class ProductDetailsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFFFFFFFF),
+      appBar: AppBar(
+        backgroundColor: const Color(0xFFFFFFFF),
+        surfaceTintColor: const Color(0xFFFFFFFF),
+        elevation: 0,
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: const Icon(
+            Icons.chevron_left_sharp,
+          ),
+        ),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 20.0),
+            child: IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.favorite_border_outlined),
+            ),
+          ),
+        ],
+      ),
       body: Stack(
         children: [
           SingleChildScrollView(
@@ -29,25 +51,6 @@ class ProductDetailsPage extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        GestureDetector(
-                          onTap: () {
-                            Navigator.pop(context);
-                          },
-                          child: Image.asset(
-                            'assets/left.png',
-                            height: 24,
-                            width: 24,
-                          ),
-                        ),
-                        IconButton(
-                          onPressed: () {},
-                          icon: const Icon(Icons.favorite_border_rounded),
-                        ),
-                      ],
-                    ),
                     const SizedBox(
                       height: 10.0,
                     ),
@@ -92,7 +95,7 @@ class ProductDetailsPage extends StatelessWidget {
             ),
           ),
           Positioned(
-            bottom: 30,
+            bottom: 20,
             left: 20,
             right: 20,
             child: MyButton(

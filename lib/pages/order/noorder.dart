@@ -7,30 +7,34 @@ class Noorder extends StatelessWidget {
 
   void shopcategory(BuildContext context) {
     Navigator.push(
-        context, MaterialPageRoute(builder: (context) => Category()));
+        context, MaterialPageRoute(builder: (context) => const Category()));
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFFFFFFFF),
+      appBar: AppBar(
+        backgroundColor: const Color(0xFFFFFFFF),
+        surfaceTintColor: const Color(0xFFFFFFFF),
+        elevation: 0,
+        title: const Center(
+          child: Text(
+            'Orders',
+            style: TextStyle(
+                fontFamily: 'CircularStd',
+                fontSize: 19,
+                fontWeight: FontWeight.w700,
+                letterSpacing: 1),
+          ),
+        ),
+      ),
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const SizedBox(height: 30),
-            const Center(
-              child: Text(
-                'Orders',
-                style: TextStyle(
-                  fontFamily: 'CircularStd',
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
             const SizedBox(
-              height: 220.0,
+              height: 200.0,
             ),
             Center(
               child: Image.asset(

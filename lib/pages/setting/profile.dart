@@ -1,3 +1,4 @@
+import 'package:benstore/components/logout_dialog.dart';
 import 'package:benstore/pages/onboarding/login.dart';
 import 'package:benstore/pages/setting/add_address.dart';
 import 'package:flutter/material.dart';
@@ -339,7 +340,7 @@ class Profile extends StatelessWidget {
                 height: 10,
               ),
               GestureDetector(
-                onTap: () => login(context),
+                onTap: () => showLogoutDialog(context),
                 child: const Text(
                   'Sign Out',
                   style: TextStyle(
